@@ -13,7 +13,7 @@ async function bootstrap(): Promise<void> {
   });
   
   const config = app.get<ConfigService>(ConfigService);
-  const listenPort = config.get<number>('LISTENING_PORT', 3030);
+  const listenPort = process.env.PORT || config.get<number>('LISTENING_PORT', 3030);
   const globalPrefix = config.get<string>('WEB_API_PREFIX', 'undefined');
   
   app.useGlobalPipes(
