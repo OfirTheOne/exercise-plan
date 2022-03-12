@@ -7,9 +7,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "seed-db": "npx ts-node src/shared/mongodb/seed.ts",
-    "prepare": "husky install",
     "prebuild": "rimraf dist",
-    "pretest": "rimraf striker-tmp",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
