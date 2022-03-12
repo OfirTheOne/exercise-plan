@@ -1,0 +1,15 @@
+{
+  "moduleFileExtensions": ["js", "json", "ts"],
+  "rootDir": "../../",
+  "testEnvironment": "node",
+  "globalSetup": "<rootDir>/test/setup/pre-api-setup.ts",
+  "testRegex": ".api.spec.ts$",
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "collectCoverage": false,
+  "collectCoverageFrom": [
+    "**/*.ts"
+  ],
+  "coverageDirectory": "../../coverage/api"
+}

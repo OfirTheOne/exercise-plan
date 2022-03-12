@@ -1,0 +1,19 @@
+{
+  "moduleFileExtensions": ["js", "json", "ts"],
+  "rootDir": "../../",
+  "testEnvironment": "node",
+  "testRegex": "\\.spec\\.ts$",
+  "testPathIgnorePatterns": ["\\.api\\.spec\\.ts$"],
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "collectCoverage": false,
+  "collectCoverageFrom": [
+    "src/**/*.ts",
+    "!src/**/*.module.ts",
+    "!src/main.ts"
+  ],
+  "coverageDirectory": "<rootDir>/coverage",
+  "setupFiles": ["<rootDir>/test/setup/pre-unit-setup.ts"],
+  "runner": "groups"
+}

@@ -1,0 +1,14 @@
+FROM 31714devopsfpspc3acr.azurecr.io/node:14-alpine
+WORKDIR /hello
+ADD . .
+COPY .git/ /hello/.git
+RUN apk add --update git; \
+    npm install -g typescript; \
+    rm -rf /var/cache/apk/*; \
+    tsc; \
+    npm install --ignore-engines; \
+    mkdir -p /hello/test/coverage; \
+    mkdir -p /hello/coverage
+
+CMD ["npm","run","test"]
+
